@@ -49,3 +49,9 @@ const TopBar = () => {
 };
 
 export default TopBar;
+
+//?  <span className="d-none d-md-inline">CALL US</span> +1 235 98 95
+/* CALL US yazısını span e alıp numaradan ayırdık ki ekran küçüldükçe Call us yazısı kaybolsun..
+//* <li className="d-none d-md-block"> icon lar sayfa küçülünce kaybolsun diye yaptık..
+
+//! <Button size="sm"> login butonu küçük olsun diye...

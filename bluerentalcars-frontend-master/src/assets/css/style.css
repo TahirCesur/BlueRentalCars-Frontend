@@ -1,5 +1,6 @@
 /************ GENRAL SETTINGS ************/
 
+/* Renkleri değişkenli tanımlarsak aşağıda isimleri yazmamız yeterli*/
 :root {
   --color1: #004ce5;
   --color2: #4a80ee;
@@ -32,10 +33,10 @@ body {
 
 .topbar ul {
   list-style-type: none;
-  display: flex;
+  display: flex; /* iconları yanyana getirmek için kullandık */
   margin: 0;
   padding: 0;
-  justify-content: flex-end;
+  justify-content: flex-end; /* sosyal medya iconlarını en sağa aşmak için */
 }
 
 .topbar ul li {

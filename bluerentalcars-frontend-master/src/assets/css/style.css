@@ -75,3 +75,29 @@ body {
   right: 50px;
   left: auto;
 }
+
+.slider form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.2rem;
+}
+
+.slider .input-group-text {
+  font-size: 0.8rem;
+}
+
+.slider .row {
+  align-items: center;
+}
+
+/************ CUSTOMER SERVICE CARD ************/
+
+.customer-service-card .icon {
+  color: var(--color2);
+  font-size: 4rem;
+}
+
+.customer-service-card .row {
+  align-items: center;
+  text-align: center;
+}

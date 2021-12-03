@@ -160,7 +160,7 @@ body {
 }
 
 .vehicleList li.active::after {
-  content: "";
+  content: ""; /* ok işareti */
   position: absolute;
   right: -10px;
   width: 0;
@@ -168,8 +168,8 @@ body {
   border-left: 10px solid var(--color1-transparent-15);
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; /* ok u ortaladık */
+  transform: translateY(-50%); /* ok u ortaladık */
 }
 
 .vehicleList li:first-child,

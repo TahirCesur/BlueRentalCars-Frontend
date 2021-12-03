@@ -150,7 +150,7 @@ body {
   text-align: center; /* yazıları ortaladık */
   font-size: 1.2rem;
   font-weight: 700; /* yazı genişliği */
-  margin-bottom: 1px;
+  margin-bottom: 1px; /* ince çizgi ile araları açar */
   cursor: pointer;
 }
 
@@ -178,7 +178,7 @@ body {
 }
 
 .vehicleList li button {
-  width: 100%;
+  width: 100%; /* Butonların genişliğinin otomatik olmasını sağladık 
 }
 
 .vehicleList li button:disabled {

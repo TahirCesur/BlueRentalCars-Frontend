@@ -191,6 +191,17 @@ body {
   overflow-y: auto;
 }
 
+/************ NEWSLETTER ************/
+.newsletter {
+  background-color: var(--color4);
+  padding: 4rem;
+}
+
+.newsletter .row {
+  justify-content: center;
+  align-items: center;
+}
+
 /************ FOOTER ************/
 footer {
   background-color: var(--color1);

@@ -5,6 +5,8 @@ import MenuBar from "./components/common/MenuBar";
 import TopBar from "./components/common/TopBar";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <TopBar />
       <MenuBar />
       <Routes>
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>

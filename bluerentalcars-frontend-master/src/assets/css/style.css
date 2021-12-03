@@ -180,7 +180,6 @@ body {
 .vehicleList li button {
   width: 100%; /* Butonların genişliğinin otomatik olmasını sağladık */
 }
-
 .vehicleList li button:disabled {
   cursor: default;
 }
@@ -202,23 +201,23 @@ body {
   align-items: center;
 }
 
-/************ NEWSLETTER ************/
-.newsletter {
-  background-color: var(--color4);
-  padding: 4rem;
-}
-
-.newsletter .row {
-  justify-content: center;
-  align-items: center;
-}
-
 /************ PAGE HEADER ************/
 
 .page-header {
   padding: 2rem;
   text-align: center;
   position: relative;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color1-transparent-15);
+  z-index: 2;
 }
 
 .page-header::after {
@@ -238,7 +237,10 @@ body {
 
 .page-header .header-content {
   position: relative;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  z-index: 3;
 }
 
 /************ FOOTER ************/

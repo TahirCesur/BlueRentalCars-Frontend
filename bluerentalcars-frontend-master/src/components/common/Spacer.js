@@ -5,3 +5,5 @@ const Spacer = ({ size }) => {
 };
 
 export default Spacer;
+
+//* Boşluk oluşturmak için kullanılan component tir...

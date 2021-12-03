@@ -139,17 +139,17 @@ body {
 /************ VEHICLES ************/
 
 .vehicleList {
-  list-style-type: none;
+  list-style-type: none; /* listedeki noktalar gitti */
   margin: 0;
   padding: 0;
 }
 
 .vehicleList li {
   background-color: var(--color4);
-  padding: 0.7rem;
-  text-align: center;
+  padding: 0.7rem; /* Modellerin arasın açtık */
+  text-align: center; /* yazıları ortaladık */
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 700; /* yazı genişliği */
   margin-bottom: 1px;
   cursor: pointer;
 }

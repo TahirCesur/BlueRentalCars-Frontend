@@ -178,7 +178,7 @@ body {
 }
 
 .vehicleList li button {
-  width: 100%; /* Butonların genişliğinin otomatik olmasını sağladık 
+  width: 100%; /* Butonların genişliğinin otomatik olmasını sağladık */
 }
 
 .vehicleList li button:disabled {

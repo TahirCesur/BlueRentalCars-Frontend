@@ -4,6 +4,7 @@ import Footer from "./components/common/Footer";
 import MenuBar from "./components/common/MenuBar";
 import TopBar from "./components/common/TopBar";
 import HomePage from "./pages/HomePage";
+import ServicesPage from "./pages/ServicesPage";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <TopBar />
       <MenuBar />
       <Routes>
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
       <Footer />

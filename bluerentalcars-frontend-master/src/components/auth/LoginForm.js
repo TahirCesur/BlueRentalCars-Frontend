@@ -66,13 +66,7 @@ const LoginForm = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
 
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
                   <Button variant="primary" type="submit" disabled={loading}>
                     {loading && <Spinner animation="border" size="sm" />} Login
                   </Button>

@@ -8,9 +8,7 @@ import {
   FiUser,
   FiYoutube,
 } from "react-icons/fi";
-
-//* Telefon ve sosyal medya icon larını ekliyoruz...
-//* Bu yüzden 2 adet Col oluşturduk.. 20 ve 24. satırlara...
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   return (
@@ -36,7 +34,7 @@ const TopBar = () => {
                 <FiInstagram />
               </li>
               <li>
-                <Button size="sm">
+                <Button as={Link} size="sm" to="/login">
                   <FiUser /> Login
                 </Button>
               </li>

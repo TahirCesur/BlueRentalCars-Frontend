@@ -171,3 +171,5 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
+
+//! oneOf([Yup.ref("password")] password ile confirmPasword kantrolünü yapan komuttur... 39. satır...

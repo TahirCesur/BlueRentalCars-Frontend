@@ -110,7 +110,8 @@ export default LoginForm;
 //! lg{ span: 4, offset: 4 }
 //* lg ekranlarda 12 lik yerde 4 lük boş bırak 4 lük yer kapla demektir...
 
-//? {...formik.getFieldProps("password")} field propslarını getir demektir.. (name value onChange) i getirir..
+//? {...formik.getFieldProps("password")} field propslarını getir demektir..
+//* FormControl ü formik e bağlamış oluyoruz...
 
 //! 78. satır da Spinner login butonunun yanında yuvarlak yükleniyor işaretini yapmaya yarar...
 

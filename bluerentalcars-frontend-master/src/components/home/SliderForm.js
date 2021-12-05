@@ -129,6 +129,6 @@ export default SliderForm;
 
 //! Formik.group yeni ama çok kullanılan bir yöntem...
 //! isInvalid={!!formik.errors.dropOffTime}
-//* doldurulmaığı zaman form hata versin diye yazıyoruz..
+//* doldurulmadığı zaman form hata versin diye yazıyoruz..
 //* Şu şekilde de yapılabilir...
 //* isInvalid={formik.errors.dropOffTime ? true : false}

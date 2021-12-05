@@ -8,8 +8,8 @@ import {
   Card,
   Spinner,
 } from "react-bootstrap";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+import { useFormik } from "formik"; // formik import etme...
+import * as Yup from "yup"; // formik import etmede bu da gerekli bir import...
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {
@@ -66,7 +66,13 @@ const LoginForm = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
 
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
                   <Button variant="primary" type="submit" disabled={loading}>
                     {loading && <Spinner animation="border" size="sm" />} Login
                   </Button>
@@ -83,3 +89,18 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+//! Formik.group yeni ama çok kullanılan bir yöntem...
+//* 3 aşaması oluyor...
+/*  const formik = useFormik({
+  initialValues,
+  validationSchema,
+  onSubmit,
+});
+*/
+
+//! md={{ span: 6, offset: 3 }}
+//* md ekranlarda 12 lik yerde 3 lük boş bıral 6 lık yer kapla demektir...
+
+//! lg{ span: 4, offset: 4 }
+//* lg ekranlarda 12 lik yerde 4 lük boş bırak 4 lük yer kapla demektir...

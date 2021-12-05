@@ -53,3 +53,9 @@ export default TopBar;
 //* <li className="d-none d-md-block"> icon lar sayfa küçülünce kaybolsun diye yaptık..
 
 //! <Button size="sm"> login butonu küçük olsun diye...
+
+//? Login butonuna loginform.js i bağlıyoruz...
+/* <Button as={Link} size="sm" to="/login">
+<FiUser /> Login
+</Button>
+*/

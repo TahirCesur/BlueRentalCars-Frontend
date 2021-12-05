@@ -173,3 +173,10 @@ const RegisterForm = () => {
 export default RegisterForm;
 
 //! oneOf([Yup.ref("password")] password ile confirmPasword kantrolünü yapan komuttur... 39. satır...
+
+// TODO ; MaskInput yöntemi tel no lar da istedğimiz formatı vermeye yarar...
+/* as={MaskInput}
+   maskChar="_"
+   mask="(000) 000-0000"
+   alwaysShowMask // formun şeklini vermeye yarar... Şu şekilde oldun gibi.. (___)-__-____ gibi...
+*/

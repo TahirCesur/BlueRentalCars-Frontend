@@ -29,6 +29,7 @@ const LoginForm = () => {
     console.log(values);
   };
 
+  //! Formik e bunları tanımlıyoruz...
   const formik = useFormik({
     initialValues,
     validationSchema,
@@ -91,7 +92,7 @@ const LoginForm = () => {
 export default LoginForm;
 
 //! Formik.group yeni ama çok kullanılan bir yöntem...
-//* 3 aşaması oluyor...
+//* 3 özellik aşaması ile oluyor...
 /*  const formik = useFormik({
   initialValues,
   validationSchema,
@@ -99,8 +100,18 @@ export default LoginForm;
 });
 */
 
+//? 24. satır da "required" zorunlu doldurulması gereken alan demektir...
+
+//TODO ; 45. satırda <Form noValidate onSubmit={formik.handleSubmit}> formu formike bağlıyoruz...
+
 //! md={{ span: 6, offset: 3 }}
 //* md ekranlarda 12 lik yerde 3 lük boş bıral 6 lık yer kapla demektir...
 
 //! lg{ span: 4, offset: 4 }
 //* lg ekranlarda 12 lik yerde 4 lük boş bırak 4 lük yer kapla demektir...
+
+//? {...formik.getFieldProps("password")} field propslarını getir demektir.. (name value onChange) i getirir..
+
+//! 78. satır da Spinner login butonunun yanında yuvarlak yükleniyor işaretini yapmaya yarar...
+
+// TODO ; <Link to="/register">Create new user</Link> üye değilseniz create edin linki demektir..

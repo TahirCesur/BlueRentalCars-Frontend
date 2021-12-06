@@ -13,7 +13,7 @@ export const loginFailed = () => ({
   type: types.LOGIN_FAILED,
 });
 
-/* User ın logout işleminde çağrılır */
+/* User ın logout çıkış işleminde çağrılır */
 export const logout = () => ({
   type: types.LOGOUT,
 });

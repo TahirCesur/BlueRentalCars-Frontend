@@ -57,7 +57,7 @@ const LoginForm = () => {
       });
   };
 
-  //! Formike bunaları tanımlıyoruz...
+  //! Formike bunları tanımlıyoruz...
   const formik = useFormik({
     initialValues,
     validationSchema,

@@ -204,3 +204,14 @@ export default RegisterForm;
    mask="(000) 000-0000"
    alwaysShowMask // formun şeklini vermeye yarar... Şu şekilde oldun gibi.. (___)-__-____ gibi...
 */
+
+//? PhoneNumber da "_" görünürse hata versin diye yaıldı bu işlemler..
+/* 
+phoneNumber: Yup.string()
+      .required("Please enter your phone number")
+      .test(
+        "includes_",
+        "Please enter a valid phone number",
+        (value) => value && !value.includes("_")
+      ),
+*/

@@ -8,12 +8,18 @@ import {
   Card,
   Spinner,
 } from "react-bootstrap";
-import { useFormik } from "formik"; // formik import etme...
-import * as Yup from "yup"; // formik import etmede bu da gerekli bir import...
-import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { Link, useNavigate } from "react-router-dom";
+import { getUser, login } from "../../api/user-service";
+import { toast } from "react-toastify";
+import { useStore } from "../../store";
+import { loginFailed, loginSuccess } from "../../store/user/userActions";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
+  const { dispatchUser } = useStore();
+  const navigate = useNavigate();
 
   const initialValues = {
     email: "",
@@ -26,10 +32,32 @@ const LoginForm = () => {
   });
 
   const onSubmit = (values) => {
-    console.log(values);
+    setLoading(true);
+
+    login(values)
+      .then((respLogin) => {
+        localStorage.setItem("token", respLogin.data.token);
+
+        getUser()
+          .then((respUser) => {
+            console.log(respUser);
+            dispatchUser(loginSuccess(respUser.data));
+            navigate("/");
+            setLoading(false);
+          })
+          .catch((err) => {
+            toast(err.response.data.message);
+            setLoading(false);
+            dispatchUser(loginFailed());
+          });
+      })
+      .catch((err) => {
+        toast(err.response.data.message);
+        setLoading(false);
+      });
   };
 
-  //! Formik e bunları tanımlıyoruz...
+  //! Formike bunaları tanımlıyoruz...
   const formik = useFormik({
     initialValues,
     validationSchema,

@@ -22,8 +22,8 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const initialValues = {
-    email: "",
-    password: "",
+    email: "zoom@techproed.com",
+    password: "12345",
   };
 
   const validationSchema = Yup.object({
@@ -40,7 +40,6 @@ const LoginForm = () => {
 
         getUser()
           .then((respUser) => {
-            console.log(respUser);
             dispatchUser(loginSuccess(respUser.data));
             navigate("/");
             setLoading(false);
@@ -57,7 +56,6 @@ const LoginForm = () => {
       });
   };
 
-  //! Formik e bunları tanımlıyoruz...
   const formik = useFormik({
     initialValues,
     validationSchema,

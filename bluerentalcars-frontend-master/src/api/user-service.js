@@ -16,7 +16,7 @@ const getUser = () => {
   return axios.get(`${API_URL}user`, { headers: authHeader() });
 };
 
-//car-rental-x.herokuapp.com/car-rental/api/user
+// http://car-rental-x.herokuapp.com/car-rental/api/user
 
 export { login, register, getUser };
 

@@ -1,7 +1,6 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-//* .env den url yi bu şekilde çekiyoruz...
 const API_URL = process.env.REACT_APP_API_URL;
 
 const login = (credentials) => {
@@ -16,9 +15,19 @@ const getUser = () => {
   return axios.get(`${API_URL}user`, { headers: authHeader() });
 };
 
-// http://car-rental-x.herokuapp.com/car-rental/api/user
+const updateUser = (user) => {
+  return axios.put(`${API_URL}user`, user, { headers: authHeader() });
+};
 
-export { login, register, getUser };
+const updatePassword = (credentials) => {
+  return axios.patch(`${API_URL}user/auth`, credentials, {
+    headers: authHeader(),
+  });
+};
+
+//https://car-rental-x.herokuapp.com/car-rental/api/
+
+export { login, register, getUser, updateUser, updatePassword };
 
 //! src nin dışındaki ".env" dosyasına url yi ekledik ordan çağırmış olacağız..
-//* Bunu yaprken de REACT_APP_....  d,ye tanımlarsk kütüphane eklemeye gerek kalmaz...
+//* Bunu yaprken de REACT_APP_....  diye tanımlarsak kütüphane eklemeye gerek kalmaz...

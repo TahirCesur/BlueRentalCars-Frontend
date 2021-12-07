@@ -9,3 +9,5 @@ const authHeader = () => {
 };
 
 export default authHeader;
+
+// `Bearer ${token}`  -- > "Bearer " + token   şeklin de de yazbiliriz...

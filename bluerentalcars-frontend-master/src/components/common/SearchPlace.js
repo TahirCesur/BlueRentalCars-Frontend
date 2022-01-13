@@ -43,7 +43,7 @@ const SearchPlace = (props) => {
         {data.map((item) => (
           <li
             key={item.objectID}
-            onClick={() =>{
+            onClick={() =>{ 
               props.onSelect(props.name, `${item.state} ${item.city}`);
               setData([])
             }}

@@ -16,7 +16,6 @@ import { toast } from "react-toastify";
 import { isVehicleAvaliable } from "../../api/reservation-service";
 import moment from "moment";
 import SearchPlace from "../common/SearchPlace";
-
 const SliderForm = () => {
   const [loading, setLoading] = useState(false);
   const { dispatchReservation, vehiclesState, userState } = useStore();
@@ -68,7 +67,6 @@ const SliderForm = () => {
     isVehicleAvaliable(reservationDto).then((resp) => {
       setLoading(false);
       const { isAvailable, totalPrice } = resp.data;
-
       if (!isAvailable) {
         toast(
           "The car is not avaliable in these days. Please select another one."
@@ -81,25 +79,25 @@ const SliderForm = () => {
       dispatchReservation(setReservationState(values));
 
       setModalShow(true);
+
     });
+
+
   };
+
 
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit,
   });
-
   const handleSearch = (e) => {
     const { name, value } = e.target;
-
     formik.setFieldValue(name, value);
   };
-
   const handleSelect = (name, value) => {
     formik.setFieldValue(name, value);
   };
-
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
       <Form.Select
@@ -115,7 +113,6 @@ const SliderForm = () => {
           </option>
         ))}
       </Form.Select>
-
       <SearchPlace
         placeholder="Select a place"
         name="pickUpLocation"
@@ -125,11 +122,10 @@ const SliderForm = () => {
         onSearch={handleSearch}
         onSelect={handleSelect}
       />
-
       <SearchPlace
         placeholder="Select a place"
         name="dropOfLocation"
-        title="Drop Off"
+        title="Drop Of"
         value={formik.values.dropOfLocation}
         isInvalid={!!formik.errors.dropOfLocation}
         onSearch={handleSearch}

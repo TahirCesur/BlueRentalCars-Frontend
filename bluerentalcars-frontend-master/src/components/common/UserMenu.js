@@ -5,6 +5,7 @@ import { logout } from "../../store/user/userActions";
 import { Button, DropdownButton, Dropdown } from "react-bootstrap";
 import { FiUser } from "react-icons/fi";
 import alertify from "alertifyjs";
+import { isAdmin } from "../../utils/auth";
 
 const UserMenu = () => {
   const { userState, dispatchUser } = useStore();
@@ -35,6 +36,20 @@ const UserMenu = () => {
           size="sm"
           align="end"
         >
+          {isAdmin(user.roles) && (
+            <>
+              <Dropdown.Item as={Link} to="/admin/users">
+                User Management
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/admin/vehicles">
+                Vehicle Management
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/admin/reservations">
+                Reservation Management
+              </Dropdown.Item>
+              <Dropdown.Divider />
+            </>
+          )}
           <Dropdown.Item as={Link} to="/reservations">
             Reservations
           </Dropdown.Item>

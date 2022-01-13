@@ -7,22 +7,17 @@ const Slider = () => {
   return (
     <div className="slider">
       <Container>
-        <Row>
-          <Col lg={{ span: 7, order: "last" }}>
-            <SliderCarousel />
-          </Col>
-          <Col lg={{ span: 5, order: "first" }}>
-            <SliderForm />
-          </Col>
-        </Row>
+          <Row>
+              <Col lg={{span:7, order:"last"}}>
+                    <SliderCarousel/>
+              </Col>
+              <Col lg={{span:5, order:"first"}}>
+                    <SliderForm/> 
+              </Col>
+          </Row>
       </Container>
     </div>
   );
 };
 
 export default Slider;
-
-//* <Col md={{span:7, order:"last"}}>
-//! md 12 üzerinden carousel e 7 lik yer Form a 5 lik yer verdik.
-//! Ekran küçülünce order:"last" ve "first"
-//! yardımıyla soldaki sağa sağdaki sola geçmiş oluyor...

@@ -1,10 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row, Image } from "react-bootstrap";
-import {
-  RiHeadphoneLine,
-  RiMailSendLine,
-  RiWhatsappLine,
-} from "react-icons/ri";
+import { RiHeadphoneLine, RiMailSendLine, RiWhatsappLine } from "react-icons/ri";
 import callCenter from "../../assets/img/call-center.jpg";
 import cancelReservation from "../../assets/img/cancel-reservation.jpg";
 import makeReservation from "../../assets/img/make-reservation.jpg";
@@ -39,13 +35,10 @@ const Contact = () => {
           </Card>
         </Col>
         <Col lg={4}>
-          <Card>
+        <Card>
             <Row>
               <Col xs={5}>
-                <Image
-                  src={makeReservation}
-                  className="img-fluid rounded-start"
-                />
+                <Image src={makeReservation} className="img-fluid rounded-start" />
               </Col>
               <Col xs={7}>
                 <Card.Body>
@@ -67,13 +60,10 @@ const Contact = () => {
           </Card>
         </Col>
         <Col lg={4}>
-          <Card>
+        <Card>
             <Row>
               <Col xs={5}>
-                <Image
-                  src={cancelReservation}
-                  className="img-fluid rounded-start"
-                />
+                <Image src={cancelReservation} className="img-fluid rounded-start" />
               </Col>
               <Col xs={7}>
                 <Card.Body>

@@ -25,6 +25,64 @@ body {
   border-color: var(--color2);
 }
 
+.spinner-loading {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-loading .spinner-border {
+  width: 15rem !important;
+  height: 15rem !important;
+}
+
+.spinner-loading .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+.search-place{
+  position: relative;
+}
+
+.search-place ul{
+  position: absolute;
+  top:2.5rem; left:0; right:0;
+  background-color: white;
+  border: 1px solid var(--color2);
+  border-radius: 0.3rem;
+  z-index: 5;
+  margin:0;
+  padding: 1rem;
+  list-style-type: none;
+  max-height: 20rem;
+  overflow-y: scroll;
+}
+
+.search-place ul li{
+  padding:0.4rem 0;
+  border-bottom: 1px solid var(--color1-transparent-15);
+  cursor: pointer;
+}
+
+.search-place ul li:hover{
+  background-color: var(--color1-transparent-15);
+}
+
+.search-place ul li:last-child{
+  border-bottom: none;
+}
+
+
 /************ SECTION TITLE ************/
 .section-title {
   text-align: center;
@@ -244,6 +302,30 @@ body {
 
 .page-header .breadcrumb a {
   text-decoration: none;
+}
+
+/************ ADMIN ************/
+
+.image-area {
+  background-color: var(--color4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-area button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.image-area-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /************ FOOTER ************/

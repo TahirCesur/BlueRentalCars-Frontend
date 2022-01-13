@@ -34,13 +34,8 @@ const RegisterForm = () => {
     firstName: Yup.string().required("Please enter your first name"),
     lastName: Yup.string().required("Please enter your last name"),
     email: Yup.string().email().required("Please enter your email"),
-    phoneNumber: Yup.string()
-      .required("Please enter your phone number")
-      .test(
-        "includes_",
-        "Please enter a valid phone number",
-        (value) => value && !value.includes("_")
-      ),
+    phoneNumber: Yup.string().required("Please enter your phone number")
+      .test("includes_","Please enter a valid phone number", (value)=> value && !value.includes("_") ),
     address: Yup.string().required("Please enter your address"),
     zipCode: Yup.string().required("Please enter your zip code"),
     password: Yup.string().required("Please enter your password"),
@@ -54,17 +49,17 @@ const RegisterForm = () => {
 
     setLoading(true);
 
-    register(values)
-      .then((resp) => {
-        setLoading(false);
-        toast("You are registered successfully. ");
-        navigate("/login");
-      })
-      .catch((err) => {
-        console.log("Hata oluştu");
-        setLoading(false);
-        toast(err.response.data.message);
-      });
+    register(values).then(resp=>{
+      setLoading(false);
+      toast("You are registered successfully. ");
+      navigate("/login");
+    })
+    .catch(err=> {
+      console.log("Hata oluştu");
+      setLoading(false);
+      toast(err.response.data.message);
+    })
+
   };
 
   const formik = useFormik({
@@ -195,23 +190,3 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
-
-//! oneOf([Yup.ref("password")] password ile confirmPasword kantrolünü yapan komuttur... 39. satır...
-
-// TODO ; MaskInput yöntemi tel no lar da istedğimiz formatı vermeye yarar...
-/* as={MaskInput}
-   maskChar="_"
-   mask="(000) 000-0000"
-   alwaysShowMask // formun şeklini vermeye yarar... Şu şekilde oldun gibi.. (___)-__-____ gibi...
-*/
-
-//? PhoneNumber da "_" görünürse hata versin diye yaıldı bu işlemler..
-/* 
-phoneNumber: Yup.string()
-      .required("Please enter your phone number")
-      .test(
-        "includes_",
-        "Please enter a valid phone number",
-        (value) => value && !value.includes("_")
-      ),
-*/

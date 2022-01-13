@@ -19,17 +19,9 @@ const Partners = () => {
         </Col>
       </Row>
       <Row className="mt-2">
-        {partnerList.map((partner, index) => (
-          <Col key={index}>
-            <Image
-              src={
-                require(`../../assets/img/partners/${partner.image}`).default
-              }
-              alt={partner.title}
-              className="img-fluid"
-            />
-          </Col>
-        ))}
+          {partnerList.map((partner,index)=><Col key={index}>
+            <Image src={require(`../../assets/img/partners/${partner.image}`).default} alt={partner.title} className="img-fluid"/>
+        </Col>)}
       </Row>
     </Container>
   );

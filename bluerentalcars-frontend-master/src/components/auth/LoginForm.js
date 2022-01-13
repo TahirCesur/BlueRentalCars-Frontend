@@ -22,8 +22,8 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const initialValues = {
-    email: "zoom@techproed.com",
-    password: "12345",
+    email: "",
+    password: "",
   };
 
   const validationSchema = Yup.object({
@@ -38,17 +38,18 @@ const LoginForm = () => {
       .then((respLogin) => {
         localStorage.setItem("token", respLogin.data.token);
 
-        getUser()
-          .then((respUser) => {
-            dispatchUser(loginSuccess(respUser.data));
-            navigate("/");
-            setLoading(false);
-          })
-          .catch((err) => {
-            toast(err.response.data.message);
-            setLoading(false);
-            dispatchUser(loginFailed());
-          });
+        getUser().then((respUser) => {
+          dispatchUser(loginSuccess(respUser.data));
+          navigate("/");
+          setLoading(false);
+        })
+        .catch(err=> {
+          toast(err.response.data.message);
+          setLoading(false);
+          dispatchUser(loginFailed());
+        })
+
+        
       })
       .catch((err) => {
         toast(err.response.data.message);
@@ -116,29 +117,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-
-//! Formik.group yeni ama çok kullanılan bir yöntem...
-//* 3 özellik aşaması ile oluyor...
-/*  const formik = useFormik({
-  initialValues,
-  validationSchema,
-  onSubmit,
-});
-*/
-
-//? "required" zorunlu doldurulması gereken alan demektir...
-
-//TODO ; <Form noValidate onSubmit={formik.handleSubmit}> formu formike bağlıyoruz...
-
-//! md={{ span: 6, offset: 3 }}
-//* md ekranlarda 12 lik yerde 3 lük boş bıral 6 lık yer kapla demektir...
-
-//! lg{ span: 4, offset: 4 }
-//* lg ekranlarda 12 lik yerde 4 lük boş bırak 4 lük yer kapla demektir...
-
-//? {...formik.getFieldProps("password")} field propslarını getir demektir..
-//* FormControl ü formik e bağlamış oluyoruz...
-
-//! Spinner login butonunun yanında yuvarlak yükleniyor işaretini yapmaya yarar...
-
-// TODO ; <Link to="/register">Create new user</Link> üye değilseniz create edin linki demektir..

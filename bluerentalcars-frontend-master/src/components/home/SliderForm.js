@@ -16,6 +16,7 @@ import { toast } from "react-toastify";
 import { isVehicleAvaliable } from "../../api/reservation-service";
 import moment from "moment";
 import SearchPlace from "../common/SearchPlace";
+
 const SliderForm = () => {
   const [loading, setLoading] = useState(false);
   const { dispatchReservation, vehiclesState, userState } = useStore();
@@ -187,3 +188,20 @@ const SliderForm = () => {
 export default SliderForm;
 
 //? <FiCalendar /> &nbsp; Drop off  --> &nbsp; ikon ile yazı arasına boşluk koymaya yarar...
+
+//! Form ile ilgili detaylı bilgiyi formik sitesinden alabiliriz..
+/*
+//* En basit şekli budur...
+
+const initialValues = {};
+
+const validationSchema = Yup.object({});
+
+const onSubmit = (values) => {}
+
+const formik = useFormik({
+  initialValues,
+  validationSchema,
+  onSubmit,
+});
+*/

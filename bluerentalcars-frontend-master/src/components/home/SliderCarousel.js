@@ -23,3 +23,5 @@ const SliderCarousel = () => {
 };
 
 export default SliderCarousel;
+
+//! 7. satırda ki indicators={false} Fot ların altındaki --- slider çizgilerinin silinmesini sağlar...

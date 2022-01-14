@@ -79,12 +79,8 @@ const SliderForm = () => {
       dispatchReservation(setReservationState(values));
 
       setModalShow(true);
-
     });
-
-
   };
-
 
   const formik = useFormik({
     initialValues,
@@ -189,3 +185,5 @@ const SliderForm = () => {
 };
 
 export default SliderForm;
+
+//? <FiCalendar /> &nbsp; Drop off  --> &nbsp; ikon ile yazı arasına boşluk koymaya yarar...

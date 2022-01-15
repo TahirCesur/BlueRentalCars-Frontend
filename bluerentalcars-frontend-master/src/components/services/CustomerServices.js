@@ -25,3 +25,5 @@ const CustomerServices = () => {
 };
 
 export default CustomerServices;
+
+//* className="g-5" --> Card ların arasına 5 birimlik boşluk bırakır...

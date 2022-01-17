@@ -214,6 +214,7 @@ body {
 }
 
 .vehicleList li.active::after {
+  /*vehicleList te ok işareti yapmayı sağladı*/
   content: "";
   position: absolute;
   right: -10px;
@@ -228,7 +229,7 @@ body {
 
 .vehicleList li:first-child,
 .vehicleList li:last-child {
-  padding: 0;
+  padding: 0; /* Birinci ve en sonuncu yukarı aşağı butonunu tam satıra sığdırdı*/
 }
 
 .vehicleList li button {

@@ -7,9 +7,11 @@ import Spacer from "../../components/common/Spacer";
 const VehiclesNewPage = () => {
   return (
     <>
-      <PageHeader title="VEhicle Management" />
+      <PageHeader title="Vehicle Management" />
       <Spacer />
-      <Container><VehicleNew/></Container>
+      <Container>
+        <VehicleNew />
+      </Container>
       <Spacer />
     </>
   );

@@ -15,8 +15,8 @@ const TopBar = () => {
       <Container>
         <Row>
           <Col xs={7}>
-            <FiPhoneCall size={16} />{" "}
-            <span className="d-none d-md-inline">CALL US</span> +1 235 98 95
+            <FiPhoneCall size={16} />
+            <span className="d-none d-md-inline"> CALL US </span> +1 235 98 95{" "}
           </Col>
           <Col xs={5}>
             <ul>
@@ -33,7 +33,7 @@ const TopBar = () => {
                 <FiInstagram />
               </li>
               <li>
-                <UserMenu/>
+                <UserMenu />
               </li>
             </ul>
           </Col>
@@ -44,3 +44,8 @@ const TopBar = () => {
 };
 
 export default TopBar;
+
+//* d-none d-md-inline yapma nedenimiz küçük ekranda
+//* kaybolsunlar diye ve block olursa aşağı iner diye inline yaptık
+
+//? d-none d-md-block yapma nedenimiz küçük ekranda kaybolsunlar diye yapmış olduk...

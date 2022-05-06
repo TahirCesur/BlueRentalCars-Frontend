@@ -13,8 +13,8 @@ const SliderCarousel = () => {
             alt={slider.title}
           />
           <Carousel.Caption>
-            <h3>{slider.title}</h3>
-            <p className="d-none d-lg-block">{slider.description}</p>
+            <h3> {slider.title} </h3>
+            <p className="d-none d-lg-block"> {slider.description} </p>
           </Carousel.Caption>
         </Carousel.Item>
       ))}
@@ -27,3 +27,6 @@ export default SliderCarousel;
 //! 7. satırda ki "indicators={false}" Fot ların altındaki --- slider çizgilerinin silinmesini sağlar...
 //* variant="dark" slider da ki "< >" iaşretlerinin siyah görünmesini sağladı...
 //TODO <p className="d-none d-lg-block">{slider.description}</p> Küçük ekranda açıklama gizlemek için yapıldı.
+
+//? {sliderList.map((slider)  => (
+//?   <Carousel.Item key={slider.id} data dosyasındaki sliderList bilgilerinden dönmesini sağlıyoruz.

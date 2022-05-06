@@ -22,6 +22,12 @@ const Slider = () => {
 
 export default Slider;
 
+//! Notlar
+
+//? xs-- en küçük ekranlarda
+//? md-- middle orta ekranlarda
+//? lg-- en büyük ekranlarda
+
 //* <Col lg={{span:7, order:"last"}}> order last yaptığımızda Büyük ekranda en sağda görünecek carousel
 //* Küçük ekranda ise en önde carousel görünecek demektir...
 
